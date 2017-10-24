@@ -18,6 +18,6 @@ fpm:
  dockerfile: ./Dockerfile
  build: ./containers/fpm
  ports: 
-  - 9000:9000
+  - 9009:9009
  volumes:
   - ./code:/var/www:rw
