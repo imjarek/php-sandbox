@@ -22,5 +22,9 @@ RUN yes | pecl install xdebug \
     && echo "xdebug.remote_port=8888" \
     && echo "xdebug.idekey=www-data" >> /usr/local/etc/php/conf.d/xdebug.ini
 
+RUN apt-get update && \
+    apt-get install -y \
+        zlib1g-dev
+
 COPY conf /usr/local/etc/php-fpm.d/
 CMD ["php-fpm"]

@@ -21,3 +21,8 @@ fpm:
   - 9000:9000
  volumes:
   - ./code:/var/www:rw
+composer:
+ restart: 'no'
+ build: ./containers/composer
+ volumes_from:
+  - fpm:rw
