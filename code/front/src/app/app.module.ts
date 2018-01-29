@@ -8,18 +8,21 @@ import { FormsModule } from '@angular/forms';
 import { UserDetailComponent } from './user-detail/user-detail.component'; 
 
 import { UserService } from './user.service';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         UsersComponent,
-        UserDetailComponent
+        UserDetailComponent,
+        MessagesComponent
         ],
         imports: [
           BrowserModule,
           FormsModule
         ],
-        providers: [ UserService ] // , MessageService ],
+        providers: [ UserService, MessageService ] // , MessageService ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

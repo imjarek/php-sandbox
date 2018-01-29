@@ -3,12 +3,14 @@ import { USERS } from './mock-users';
 import { User } from './user';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { MessageService } from './message.service';
 
 @Injectable()
 export class UserService {
 
-    constructor() { }
+    constructor(private messageService: MessageService) { }
     getUsers(): Observable<User[]> {
+        this.messageService.add('UserService: users fetched');
         return of(USERS);
     }
 }
