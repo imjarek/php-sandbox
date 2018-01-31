@@ -26,3 +26,5 @@ composer:
  build: ./containers/composer
  volumes_from:
   - fpm:rw
+mongo:
+ build: ./containers/mongo
