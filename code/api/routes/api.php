@@ -13,6 +13,18 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware('api')->get('/users', function (Request $request) {
+    // proper CORS handling should be somewhere for all API calls
+    header('Access-Control-Allow-Origin: *');
+    // collection should go from DB
+    return array(
+        ['id' => 1, 'name' => 'Boombastic'],
+        ['id' => 2, 'name' => 'FlashMan'],
+        ['id' => 3, 'name' => 'Mario'],
+        ['id' => 4, 'name' => 'Pacman']
+    );
 });

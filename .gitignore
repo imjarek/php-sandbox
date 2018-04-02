@@ -1,1 +1,4 @@
 nbproject
+logs/*
+code/api/storage/logs/*
+logs/*
