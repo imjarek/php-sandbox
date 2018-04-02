@@ -11,7 +11,7 @@ export class UsersComponent implements OnInit {
 
     constructor(private userService: UserService) { }
 
-    heroes: Hero[];
+    users: User[];
     
     getUsers(): void {
       this.userService.getUsers()

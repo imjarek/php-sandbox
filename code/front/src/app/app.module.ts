@@ -22,7 +22,7 @@ import { MessageService } from './message.service';
           BrowserModule,
           FormsModule
         ],
-        providers: [ UserService, MessageService ] // , MessageService ],
+        providers: [ UserService, MessageService ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
