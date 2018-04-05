@@ -1,8 +1,11 @@
 <div>Hello
-    <h1>  
+    <h1>
       {{ title }} Admin Panel
     </h1>
-
-    <app-heroes></app-heroes>
+    <nav>
+      <a routerLink="/users">Users</a>
+      <a routerLink="/dashboard">Dashboard</a>
+    </nav>
+    <router-outlet></router-outlet>
     <app-messages></app-messages>
 </div>

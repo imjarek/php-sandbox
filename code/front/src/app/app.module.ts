@@ -10,17 +10,21 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserService } from './user.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         UsersComponent,
         UserDetailComponent,
-        MessagesComponent
+        MessagesComponent,
+        DashboardComponent
         ],
         imports: [
           BrowserModule,
-          FormsModule
+          FormsModule,
+          AppRoutingModule
         ],
         providers: [ UserService, MessageService ],
     bootstrap: [AppComponent]
